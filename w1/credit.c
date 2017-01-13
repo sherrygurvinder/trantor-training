@@ -1,8 +1,8 @@
 #include<stdio.h>
 
-int get_int()
+long long int get_long_long()
 {
-int n;
+long long int n;
 printf("ENTER CREDIT CARD NO: ");
 scanf("%d",&n);
 
@@ -17,9 +17,10 @@ return n;
 
 void main()
 {
-int n,i=1,n1,temp1=0,temp=0,sum=0,sum1,sum2,result=0,final;
+int i=1,temp1=0,temp=0,sum=0,sum1,sum2,result=0,final;
 
-n=get_int();
+long long int n,n1;
+n=get_long_long();
 
 
 
@@ -58,10 +59,10 @@ final=temp1+result;
 
 if(final%10==0)
 {
-printf("valid");
+printf("VALID \n");
 }
 else
 {
-printf("in valid");
+printf("INVALID \n ");
 }
 }
