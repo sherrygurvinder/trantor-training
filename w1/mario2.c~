@@ -6,7 +6,7 @@ int get_int()
 	int n;
 	scanf("%d",&n);
 
-while(n<=0&&n>=24)
+while(n<=0&&n>=23)
 {
 	printf("RETRY:");
 	scanf("%d",&n);
