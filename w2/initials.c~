@@ -1,0 +1,9 @@
+#include<stdio.h>
+void main()
+{
+
+string str;
+scanf("%s",&Str);
+printf("%s",str);
+}
+

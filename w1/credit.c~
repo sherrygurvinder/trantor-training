@@ -15,14 +15,16 @@ long long int get_long_long()
 void main()
 {
 
-	int i=1,temp1=0,temp=0,sum=0,sum1,sum2,result=0,final;
+	int i=1,temp1=0,temp=0,sum=0,sum1,sum2,result=0,final,count=0;
 	long long int n,n1,n3;
 	n=get_long_long();
-	while(n!=0)
+	n3=n;
+	while(n3!=0)
 	{
 		count++;
 		n3=n3/10;
 	}
+	n3=n;
 	while(n!=0)
 	{
 		n1=n%10;
@@ -50,29 +52,29 @@ void main()
 		}
 		i++;	
 	}
-
-	final=temp1+result;
-		
+	final=temp1+result;		
 	if(final%10==0)
 	{	
 		
-		if(count==15&&(n/10^13==34||n/10^13==37))
+		if(count==15&&(n3/10^13==34||n3/10^13==37))
 		{
 			printf("Amex\n");           
           	}	
-		if(count==16&&(n/10^14==51||n/10^14==52||n/10^14==53||n/10^14==54||n/10^14==55))
+		if(count==16&&(n3/10^14==51||n3/10^14==52||n3/10^14==53||n3/10^14==54||n3/10^14==55))
 		{
 			printf("Master Card\n");
   		}        	
-		if((count==13||count==16)&&(n/10^12==4||n/10^15==4))
+		if((count==13||count==16)&&(n3/10^12==4||n3/10^15==4))
 		{
 			printf("Visa\n"); 
-		}    
-		else
-      		{
-			printf("INVALID \n");
-		}		
+		}
 	}
+    
+	else
+      	{
+		printf("INVALID \n");
+	}		
+	
 
 	
 }

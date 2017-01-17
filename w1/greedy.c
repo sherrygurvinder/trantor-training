@@ -1,5 +1,5 @@
 #include<stdio.h>
-float ask_amount()
+int ask_amount()
 {
 
 	float amount;
@@ -20,7 +20,18 @@ void main()
 	int money[5]={25,10,5,1};
 	printf("O hai! How much change is owed? \n");
 	am=ask_amount();
-	amount=(int)(am*100);
+	if(am>=1.0)
+	{	
+		amount=am*10;
+		amount=am;
+	}
+	else
+	{
+		amount=am;
+	}
+	printf("%d amount =:",amount);
+	
+	
 	while(amount!=0)
 	{
 		if(amount>=money[i])
@@ -34,6 +45,6 @@ void main()
 			i++;
 		}
 	}
-	printf(" \n %d \n ",coins);
+	printf("%d",coins);
 }
 

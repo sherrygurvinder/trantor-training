@@ -2,11 +2,11 @@
 long long int get_long_long()
 {
 	long long int n;
-	printf("\n NUMBER: ");
+	printf("ENTER CREDIT CARD NO: ");
 	scanf("%lld",&n);
 	while(n<=0)
 	{
-		printf("\n RETRY:");
+		printf("invalid re-enter :");
 		scanf("%lld",&n);
 	}
 	return n;
@@ -50,9 +50,7 @@ void main()
 		}
 		i++;	
 	}
-
-	final=temp1+result;
-		
+	final=temp1+result;		
 	if(final%10==0)
 	{	
 		
@@ -68,12 +66,13 @@ void main()
 		{
 			printf("Visa\n"); 
 		}
-	}    
-	
+	}
+    
 	else
       	{
-			printf("INVALID \n");	
-	}
+		printf("INVALID \n");
+	}		
+	
 
 	
 }
