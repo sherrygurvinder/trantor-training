@@ -12,7 +12,6 @@ int main(int arg,char* arg1[])
 	int key,key1,temp,asc,i=0,count;
 	key=atoi(arg1[1]);
 	key=key%26;
-	printf("\n key:=%d",key);
 	printf("\nplaintext:");
 	fgets(p1,50,stdin);
 	count=strlen(p1);
