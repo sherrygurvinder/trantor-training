@@ -1,36 +1,29 @@
 #include<stdio.h>
-int ask_amount()
+#include<stdlib.h>
+float ask_amount()
 {
 
-	float amount;
-	scanf("%f",&amount);
+	float amount;char a[10];
+	fgets(a,sizeof a,stdin);
+	amount=atof(a);	
 
 	while(amount<=0)
 	{
-		printf("How much change is owed?\n");
-		scanf("%f",&amount);
+	  	printf("Retry:");
+		 fgets(a,sizeof a,stdin);
+       		 amount=atof(a); 
 	}
 	return amount;
 }
 
 void main()
 {
-	int coins=0,temp=0,i=0,amount;
+	int coins=0,temp=0,i=0,amount=0;
 	float am;
 	int money[5]={25,10,5,1};
 	printf("O hai! How much change is owed? \n");
 	am=ask_amount();
-	if(am>=1.0)
-	{	
-		amount=am*10;
-		amount=am;
-	}
-	else
-	{
-		amount=am;
-	}
-	printf("%d amount =:",amount);
-	
+	amount=am*100;
 	
 	while(amount!=0)
 	{
@@ -45,6 +38,5 @@ void main()
 			i++;
 		}
 	}
-	printf("%d",coins);
+	printf("%d \n ",coins);
 }
-
